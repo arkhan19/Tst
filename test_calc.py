@@ -23,6 +23,8 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc.divide(12, 6), 2)
         self.assertEqual(calc.divide(12, 4), 3)
         self.assertEqual(calc.divide(124, 2), 62)
+        with self.assertRaises(ValueError):
+            (calc.divide(10,0))
 
 
 if __name__ == "__main__":
